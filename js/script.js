@@ -1,18 +1,20 @@
-var hotel = {
+var college = { //hotel
     // Object properties
-    name: 'Clayton',
-    rooms: 110,
-    booked: 25,
-    gym: true,
-    roomTypes: ['double', 'twin', 'suite', 'king'],
-    checkAvailablity: function() {
-        return this.rooms - this.booked;
+    name: 'Dorset College', 
+    students:300, //rooms
+     //booked
+    failed: 50, //gym boolean
+    courses: ['Computer Science', 'Business Management', 'Nursing', 'Human Resources'], //roomTypes
+    checkPassed: function() { //checkAvailaibility
+        return this.students - this.failed;
     }
 };
 
-var elName = document.getElementById('hotelName');
-elName.textContent = hotel.name;
+var elName = document.getElementById('collegeName');
+elName.textContent = college.name;
 
-var elRooms = document.getElementById('rooms');
-elRooms.textContent = hotel.checkAvailablity();
+var elPass = document.getElementById('passed');
+elPass.textContent = college.checkPassed();
 
+var elcourses = document.getElementById('courseNames');
+elcourses.textContent = college.courses;
